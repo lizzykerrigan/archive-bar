@@ -2,9 +2,9 @@ import React from "react";
 
 const MainPageDescription = () => {
   return (
-    <div class="description">
-      <div class="motto-wrap">
-        <div class="heading-jumbo-small">
+    <div className="description">
+      <div className="motto-wrap">
+        <div className="heading-jumbo-small">
           Archive is a craft beer &amp; gin specialist bar &amp; bottle shop. We
           have 18 draught beer lines, 50 gins, 4 fully-stocked beer fridges, and
           a large range of whiskey, rum, and bourbon. We also do sharing boards
@@ -12,7 +12,7 @@ const MainPageDescription = () => {
           <br />
         </div>
       </div>
-      <div class="divider"></div>
+      <div className="divider"></div>
     </div>
   );
 };
