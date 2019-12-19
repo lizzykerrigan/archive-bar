@@ -2,10 +2,10 @@ import React from "react";
 
 const PouringNowIntro = () => {
   return (
-    <div class="section-2 cc-home-wrap">
-      <div class="intro-head cc-subpage">
-        <div class="intro-content">
-          <div class="heading-jumbo">
+    <div className="section-2 cc-home-wrap">
+      <div className="intro-head cc-subpage">
+        <div className="intro-content">
+          <div className="heading-jumbo">
             Pouring Now
             <br />
           </div>
