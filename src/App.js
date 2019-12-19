@@ -9,7 +9,7 @@ import { ArchiveFooter } from "./components/ArchiveFooter";
 function App() {
   return (
     <div className="App">
-      <ArchiveNav />
+      {/* <ArchiveNav /> */}
         <Router>
           <Home path="/" />
           <PouringNow path="/pouringnow" />
