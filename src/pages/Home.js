@@ -1,8 +1,14 @@
 import React from "react";
 import MainPageDescription from "../components/MainPageDescription";
+import MainPageIntro from "../components/MainPageIntro";
 
 const Home = () => {
-  return <MainPageDescription />;
+  return (
+    <>
+      <MainPageIntro />
+      <MainPageDescription />
+    </>
+  );
 };
 
 export default Home;
