@@ -2429,26 +2429,6 @@ figcaption {
   background-color: transparent;
 }
 
-.section-2.cc-cta {
-  padding-right: 80px;
-  padding-left: 80px;
-  background-color: #f4f4f4;
-}
-
-.section-2.cc-home-wrap {
-  display: block;
-  height: 100vh;
-  margin-right: 0px;
-  margin-bottom: 30px;
-  margin-left: 0px;
-  opacity: 1;
-}
-
-.section-2.cc-store-home-wrap {
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
 .styleguide-block {
   display: block;
   margin-top: 80px;
@@ -2891,7 +2871,6 @@ figcaption {
 
 .intro-head {
   height: 100vh;
-  margin-bottom: 100px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2901,7 +2880,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   background-color: #f4f4f4;
-  background-image: url("https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df2a4eb047f851c3e9512b0_66840947_327860078153260_6997470115755196416_n.jpg");
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576786015/5df2a4eb047f851c3e9512b0_66840947_327860078153260_.jpg");
   background-position: 50% 50%;
   background-size: 108%;
   background-repeat: no-repeat;
@@ -2944,6 +2923,10 @@ figcaption {
 
 .intro-content.cc-homepage {
   margin-bottom: 20px;
+}
+
+.description {
+  height: 100vh;
 }
 
 .motto-wrap {
@@ -4024,7 +4007,7 @@ figcaption {
 
   .intro-head {
     height: 100vh;
-    background-size: auto;
+    background-size: 140%;
   }
 
   .intro-head.cc-subpage {
@@ -4201,11 +4184,6 @@ figcaption {
     margin-left: 0px;
   }
 
-  .section-2.cc-store-home-wrap {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-
   .footer {
     width: 100vw;
     text-align: center;
@@ -4298,7 +4276,7 @@ figcaption {
 
   .intro-head {
     background-position: 50% 50%;
-    background-size: auto;
+    background-size: 150%;
   }
 
   .intro-head.cc-subpage {
@@ -4414,18 +4392,6 @@ figcaption {
   h1 {
     font-size: 36px;
     line-height: 52px;
-  }
-
-  .section-2.cc-home-wrap {
-    height: 100vh;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .section-2.cc-store-home-wrap {
-    width: 100vw;
-    margin-right: 0px;
-    margin-left: 0px;
   }
 
   .footer {
