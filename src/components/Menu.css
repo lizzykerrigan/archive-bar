@@ -1,0 +1,80 @@
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  height: 90vh;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  font-size: 26px;
+  line-height: 50px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: none;
+  height: 90vh;
+  font-family: "Courier Prime", monospace;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 50%;
+  background: url("https://scontent.flhr4-2.fna.fbcdn.net/v/t1.0-9/76935991_415094802763120_6370016677035245568_n.jpg?_nc_cat=103&_nc_ohc=TtBRAj71IxQAQm71vmeYWu8qA9RYJ3v6PeOgKvWkHDbMgfpvAtvlIKcCw&_nc_ht=scontent.flhr4-2.fna&oh=2b5abb40d1620c7d21aad40384592702&oe=5E69FF04");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.span_1_of_2 {
+  width: 50%;
+  color: #202820;
+  background: #DCDCD1
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .span_1_of_2 {
+    width: 100%;
+  }
+  .span_2_of_2 {
+      display: none;
+  }
+}
+
+.menu-heading {
+  font-size: 2.5em;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding-left: 0;
+}
