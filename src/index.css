@@ -2611,13 +2611,16 @@ figcaption {
 }
 
 .heading-jumbo-small {
-  margin-top: 10px;
-  margin-bottom: 15px;
   font-size: 32px;
   line-height: 50px;
   font-weight: 400;
   text-align: left;
   text-transform: none;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier Prime', monospace;
 }
 
 .styleguide-button-wrap {
@@ -4412,7 +4415,7 @@ figcaption {
   }
 
   .heading-jumbo-small {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 42px;
   }
 
