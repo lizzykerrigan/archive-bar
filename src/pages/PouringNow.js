@@ -1,14 +1,25 @@
-import React from 'react'
-import PouringNowIntro from '../components/PouringNowIntro'
-import Menu from '../components/Menu'
+import React, { Component } from "react";
+import PouringNowIntro from "../components/PouringNowIntro";
+import Menu from "../components/Menu";
+import Preloader from "./Preloader";
 
-const PouringNow = () => {
+class PouringNow extends Component {
+  state = { loaded: false };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 2000);
+  }
+
+  render() {
     return (
-        <>
+      <>
+        {!this.state.loaded && <Preloader loaded={this.state.loaded}/>}
         <Menu />
-        <PouringNowIntro />
-        </>
-    )
+      </>
+    );
+  }
 }
 
-export default PouringNow
+export default PouringNow;
