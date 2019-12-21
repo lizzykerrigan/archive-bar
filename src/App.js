@@ -14,7 +14,7 @@ function App() {
           <Home path="/" />
           <PouringNow path="/pouringnow" />
         </Router>
-      {/* <ArchiveFooter /> */}
+      <ArchiveFooter />
     </div>
   );
 }
