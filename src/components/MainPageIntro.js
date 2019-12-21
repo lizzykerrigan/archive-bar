@@ -13,9 +13,8 @@ const MainPageIntro = () => {
         "
         sizes="100vw"
         data-w-id="25adf555-9902-15fe-6052-25565d02d245"
-        style={{ opacity: 1 }}
         alt=""
-        className="image-3"
+        className="intro-logo"
       />
     </div>
   );
