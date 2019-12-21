@@ -9,13 +9,14 @@ class PouringNow extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loaded: true });
-    }, 2000);
+    }, 1000);
   }
 
   render() {
+    console.log(this.state.loaded)
     return (
       <>
-        {!this.state.loaded && <Preloader loaded={this.state.loaded}/>}
+        {!this.state.loaded && <Preloader />}
         <Menu />
       </>
     );
