@@ -35,6 +35,8 @@ th {
 td {
   white-space: nowrap;
   border-bottom: none;
+  text-transform: capitalize;
+  text-align: left;
 }
 
 td:first-of-type,
