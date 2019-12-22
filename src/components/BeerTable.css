@@ -28,15 +28,17 @@ th {
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: rgb(50, 50, 100) solid 2px;
+  border-bottom: rgb(200, 200, 200) solid 2px;
   border-top: none;
 }
 
 td {
-  white-space: pre-wrap;
+  white-space: normal;
   border-bottom: none;
   text-transform: capitalize;
   text-align: left;
+  line-height: 1em;
+  font-size: 1rem;
 }
 
 td:first-of-type,
