@@ -1,0 +1,24 @@
+ul {
+  list-style-type: none;
+  column-count: 2;
+  padding: 0 15vw;
+  column-rule: 1px double #1f1f1f;
+  column-gap: 20%;
+  text-align: left;
+}
+
+li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.drinks-list {
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    padding: 0 5vw;
+  }
+}

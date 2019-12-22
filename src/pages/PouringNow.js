@@ -3,6 +3,7 @@ import PouringNowIntro from "../components/PouringNowIntro";
 import Menu from "../components/Menu";
 import Preloader from "./Preloader";
 import BeerTable from "../components/BeerTable";
+import DrinksList from "../components/DrinksList";
 
 class PouringNow extends Component {
   state = { loaded: false };
@@ -20,6 +21,7 @@ class PouringNow extends Component {
         {!this.state.loaded && <Preloader />}
         <Menu />
         <BeerTable />
+        <DrinksList listName={"gins"} />
       </>
     );
   }
