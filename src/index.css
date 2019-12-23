@@ -2859,7 +2859,7 @@ figcaption {
   background-color: #f4f4f4;
   background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576786015/5df2a4eb047f851c3e9512b0_66840947_327860078153260_.jpg");
   background-position: 50% 50%;
-  background-size: 108%;
+  background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
   -webkit-transition: opacity 1000ms ease;
