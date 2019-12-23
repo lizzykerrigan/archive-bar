@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PouringNowIntro from "../components/PouringNowIntro";
 import Menu from "../components/Menu";
 import Preloader from "./Preloader";
 import BeerTable from "../components/BeerTable";
@@ -28,6 +27,7 @@ class PouringNow extends Component {
         <DrinksList listName="bourbon" heading="Bourbon" class="single-col" />
         <DrinksList listName="otherSpirits" heading="Other Spirits" />
         <WinesList listName="wines" />
+        <DrinksList listName="cocktails" heading="Cocktails" />
       </>
     );
   }
