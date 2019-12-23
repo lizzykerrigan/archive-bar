@@ -4353,6 +4353,10 @@ figcaption {
     padding: 2em 0;
   }
 
+  .navigation-item {
+    font-size: 0.9rem;
+  }
+
   .menu-button {
     background-image: url("https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df24a759bca42254a1ea429_1200px-Hamburger_icon_white.svg.png");
     background-position: 50% 50%;
