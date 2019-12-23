@@ -13,7 +13,7 @@ function App() {
       <ArchiveNav />
         <Router>
           <Home path="/" />
-          <Drinks path="/Drinks" />
+          <Drinks path="/drinks" />
           <ContactPage path="/contact" />
         </Router>
       <ArchiveFooter />
