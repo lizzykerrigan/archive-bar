@@ -1,9 +1,10 @@
 ul {
   list-style-type: none;
+  font-size: 1.2rem;
   column-count: 3;
   padding: 0 15vw;
   column-rule: 1px double #1f1f1f;
-  column-gap: 20%;
+  column-gap: 10%;
   text-align: left;
 }
 
