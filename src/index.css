@@ -2263,7 +2263,7 @@ textarea.w-select {
 }
 
 body {
-  font-family: "Courier Prime", monospace;
+  font-family: "EB Garamond", serif;
   color: #1a1b1f;
   font-size: 16px;
   line-height: 28px;
@@ -2515,7 +2515,7 @@ figcaption {
 
 .label {
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 1.1rem;
   line-height: 20px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -2558,8 +2558,7 @@ figcaption {
 }
 
 .paragraph-light {
-  opacity: 0.8;
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
 .heading-jumbo {
@@ -2572,7 +2571,7 @@ figcaption {
   border-radius: 0px;
   background-color: transparent;
   opacity: 1;
-  font-family: "Courier Prime", sans-serif;
+  font-family: "EB Garamond", serif;
   font-size: 74px;
   line-height: 80px;
   font-style: normal;
@@ -2587,8 +2586,8 @@ figcaption {
 }
 
 .heading-jumbo-small {
-  font-size: 32px;
-  line-height: 50px;
+  font-size: 44px;
+  line-height: 68px;
   font-weight: 400;
   text-align: left;
   text-transform: none;
@@ -2596,7 +2595,7 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Courier Prime", monospace;
+  font-family: "EB Garamond", serif;
 }
 
 .styleguide-button-wrap {
@@ -3073,7 +3072,7 @@ figcaption {
 }
 
 .room-hire-details {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: left;
 }
 
@@ -3277,8 +3276,7 @@ figcaption {
 
 .social-media-link {
   margin-bottom: 5px;
-  opacity: 0.8;
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
 .social-media-link:hover {
@@ -3472,7 +3470,7 @@ figcaption {
 }
 
 .body {
-  font-family: "Courier Prime", sans-serif;
+  font-family: "EB Garamond", serif;
 }
 
 .collection-item {
@@ -3537,7 +3535,7 @@ figcaption {
 }
 
 .body-2 {
-  font-family: "Courier Prime", sans-serif;
+  font-family: "EB Garamond", serif;
 }
 
 .collection-item-2 {
@@ -3584,7 +3582,7 @@ figcaption {
 }
 
 .body-3 {
-  font-family: "Courier Prime", sans-serif;
+  font-family: "EB Garamond", serif;
 }
 
 .div-block {
@@ -3671,7 +3669,7 @@ figcaption {
 }
 
 .body-4 {
-  font-family: "Courier Prime", sans-serif;
+  font-family: "EB Garamond", serif;
 }
 
 .grid {
@@ -3767,10 +3765,6 @@ figcaption {
 
 .collection-list-2 {
   margin-bottom: 20px;
-}
-
-.link {
-  opacity: 0.6;
 }
 
 .preloader {
@@ -3878,7 +3872,7 @@ figcaption {
 
   .w-nav-link {
     padding: 0 0.5em;
-    font-family: "Courier Prime", monospace;
+    font-family: "EB Garamond", serif;
   }
 
   .navigation-item:hover {
@@ -4068,7 +4062,7 @@ figcaption {
   }
 
   .body-3 {
-    font-family: "Courier Prime", sans-serif;
+    font-family: "EB Garamond", serif;
   }
 
   .paragraph-5 {
@@ -4276,7 +4270,7 @@ figcaption {
   }
 
   .body-3 {
-    font-family: "Courier Prime", sans-serif;
+    font-family: "EB Garamond", serif;
   }
 
   .intro-logo {
@@ -4323,7 +4317,7 @@ figcaption {
   }
 
   .heading-jumbo-small {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 42px;
   }
 
@@ -4435,7 +4429,7 @@ figcaption {
   }
 
   .body-3 {
-    font-family: "Courier Prime", sans-serif;
+    font-family: "EB Garamond", serif;
   }
 
   .intro-logo {
