@@ -53,7 +53,7 @@ class BeerTable extends Component {
 
     return (
       <div className="beer-table">
-        <h1>Beer Board</h1>
+        <h2>Beer Board</h2>
         <table>
           <thead>
             <tr>
