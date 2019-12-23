@@ -22,6 +22,7 @@ class PouringNow extends Component {
         <BeerTable />
         <DrinksList listName={"gins"} heading={"Gin"} />
         <DrinksList listName={"flavouredGins"} heading={"Flavoured Gin"} />
+        <DrinksList listName={"rum"} heading={"Rum"} />
       </>
     );
   }
