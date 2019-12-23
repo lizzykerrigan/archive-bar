@@ -49,6 +49,7 @@ class DrinksList extends Component {
               ))
             : null}
         </ul>
+        <img src="divider-bottom.svg" aria-hidden="true" className="bottom-divider"/>
       </div>
     );
   }
