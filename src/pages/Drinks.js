@@ -15,6 +15,8 @@ class Drinks extends Component {
   }
 
   render() {
+    document.title = "Drinks Menu | Archive Bar & Bottle";
+
     return (
       <>
         {!this.state.loaded && <Preloader />}
