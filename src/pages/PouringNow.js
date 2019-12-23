@@ -20,9 +20,12 @@ class PouringNow extends Component {
         {!this.state.loaded && <Preloader />}
         <Menu />
         <BeerTable />
-        <DrinksList listName={"gins"} heading={"Gin"} />
-        <DrinksList listName={"flavouredGins"} heading={"Flavoured Gin"} />
-        <DrinksList listName={"rum"} heading={"Rum"} />
+        <DrinksList listName="gins" heading="Gin" />
+        <DrinksList listName="flavouredGins" heading="Flavoured Gin" />
+        <DrinksList listName="rum" heading="Rum" />
+        <DrinksList listName="whisky" heading="Whisky" />
+        <DrinksList listName="bourbon" heading="Bourbon" />
+        <DrinksList listName="otherSpirits" heading="Other Spirits" />
       </>
     );
   }
