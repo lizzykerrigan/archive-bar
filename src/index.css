@@ -2724,7 +2724,7 @@ figcaption {
   -webkit-transition: color 400ms ease;
   transition: color 400ms ease;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.1rem;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
