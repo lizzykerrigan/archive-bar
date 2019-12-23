@@ -37,19 +37,22 @@ class DrinksList extends Component {
     return (
       <div className={`drinks-list ${this.props.listName}-list`}>
         <h2>{this.props.heading}</h2>
-        <ul>
+        <ul className={this.props.class ? this.props.class : null}>
           {loaded
             ? fields.map(el => (
                 <li>
-                  <strong>
-                    {el.name}, {el.price}
-                  </strong>{" "}
-                  ({el.strength})
+                  <strong>{el.name}</strong>
+                  <br />
+                  {el.price} {el.strength ? `(${el.strength})` : null}
                 </li>
               ))
             : null}
         </ul>
-        <img src="divider-bottom.svg" aria-hidden="true" className="bottom-divider"/>
+        <img
+          src="divider-bottom.svg"
+          aria-hidden="true"
+          className="bottom-divider"
+        />
       </div>
     );
   }
