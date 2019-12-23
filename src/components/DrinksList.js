@@ -33,11 +33,10 @@ class DrinksList extends Component {
 
   render() {
     const { fields, loaded } = this.state;
-    console.log(fields);
     fields.sort((a, b) => a.name.localeCompare(b.name));
     return (
       <div className={`drinks-list ${this.props.listName}-list`}>
-        <h2>Gin</h2>
+        <h2>{this.props.heading}</h2>
         <ul>
           {loaded
             ? fields.map(el => (

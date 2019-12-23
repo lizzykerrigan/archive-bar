@@ -15,13 +15,13 @@ class PouringNow extends Component {
   }
 
   render() {
-    console.log(this.state.loaded)
     return (
       <>
         {!this.state.loaded && <Preloader />}
         <Menu />
         <BeerTable />
-        <DrinksList listName={"gins"} />
+        <DrinksList listName={"gins"} heading={"Gin"} />
+        <DrinksList listName={"flavouredGins"} heading={"Flavoured Gin"} />
       </>
     );
   }
