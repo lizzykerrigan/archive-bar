@@ -4,6 +4,7 @@ import Menu from "../components/Menu";
 import Preloader from "./Preloader";
 import BeerTable from "../components/BeerTable";
 import DrinksList from "../components/DrinksList";
+import WinesList from "../components/WinesList";
 
 class PouringNow extends Component {
   state = { loaded: false };
@@ -24,8 +25,9 @@ class PouringNow extends Component {
         <DrinksList listName="flavouredGins" heading="Flavoured Gin" />
         <DrinksList listName="rum" heading="Rum" />
         <DrinksList listName="whisky" heading="Whisky" />
-        <DrinksList listName="bourbon" heading="Bourbon" />
+        <DrinksList listName="bourbon" heading="Bourbon" class="single-col" />
         <DrinksList listName="otherSpirits" heading="Other Spirits" />
+        <WinesList listName="wines" />
       </>
     );
   }
