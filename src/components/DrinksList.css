@@ -1,10 +1,15 @@
 ul {
   list-style-type: none;
-  column-count: 2;
+  column-count: 3;
   padding: 0 15vw;
   column-rule: 1px double #1f1f1f;
   column-gap: 20%;
   text-align: left;
+}
+
+.single-col {
+  columns: 1;
+  text-align: center;
 }
 
 li {
@@ -32,5 +37,9 @@ li {
   .bottom-divider {
     width: 75%;
     margin: 10% auto;
+  }
+
+  .single-col {
+    text-align: left;
   }
 }
