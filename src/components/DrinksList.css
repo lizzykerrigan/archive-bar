@@ -13,12 +13,24 @@ li {
   break-inside: avoid;
 }
 
-.drinks-list {
-  padding: 30px 0;
+.gins-list {
+  padding: 30px 0 0 0;
+}
+
+.bottom-divider {
+  width: 40%;
+  height: auto;
+  margin: 5% auto;
 }
 
 @media screen and (max-width: 767px) {
   ul {
     padding: 0 5vw;
+    column-count: 1;
+  }
+
+  .bottom-divider {
+    width: 75%;
+    margin: 10% auto;
   }
 }
