@@ -8,7 +8,6 @@ const Gallery = () => {
         <div className="columns">
             <img
               src="https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df23f4dba2fb068040e4101_62414138_307239270215341_2685487847250591744_n.jpg"
-              data-w-id="45c2b0bf-c5ba-7c7f-ca3c-4cfd6e84df0f"
               alt=""
               className="thumb"
             />
