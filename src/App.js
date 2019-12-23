@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import ArchiveNav from "./components/ArchiveNav.js";
-import PouringNow from "./pages/PouringNow";
+import Drinks from "./pages/Drinks";
 import { Router } from "@reach/router";
 import Home from "./pages/Home";
 import { ArchiveFooter } from "./components/ArchiveFooter";
@@ -13,7 +13,7 @@ function App() {
       <ArchiveNav />
         <Router>
           <Home path="/" />
-          <PouringNow path="/pouringnow" />
+          <Drinks path="/Drinks" />
           <ContactPage path="/contact" />
         </Router>
       <ArchiveFooter />

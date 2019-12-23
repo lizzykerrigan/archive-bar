@@ -5,7 +5,7 @@ import BeerTable from "../components/BeerTable";
 import DrinksList from "../components/DrinksList";
 import WinesList from "../components/WinesList";
 
-class PouringNow extends Component {
+class Drinks extends Component {
   state = { loaded: false };
 
   componentDidMount() {
@@ -33,4 +33,4 @@ class PouringNow extends Component {
   }
 }
 
-export default PouringNow;
+export default Drinks;

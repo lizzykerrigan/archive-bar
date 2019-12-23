@@ -22,7 +22,7 @@ export default class ArchiveNav extends Component {
             </a>
             <div className="menu">
               <nav role="navigation" className="navigation-items w-nav-menu">
-                <a href="/pouringnow" className="navigation-item w-nav-link">
+                <a href="/Drinks" className="navigation-item w-nav-link">
                   Drinks
                 </a>
                 <a href="/food" className="navigation-item w-nav-link">
