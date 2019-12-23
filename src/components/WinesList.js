@@ -52,7 +52,7 @@ class WinesList extends Component {
                 <li>
                   <strong>{el.name}</strong>
                   <br />
-                  {el.price}
+                  <em>{el.price}</em>
                 </li>
               ))
             : null}
@@ -64,7 +64,7 @@ class WinesList extends Component {
                 <li>
                   <strong>{el.name}</strong>
                   <br />
-                  {el.price}
+                  <em>{el.price}</em>
                 </li>
               ))
             : null}
@@ -78,7 +78,7 @@ class WinesList extends Component {
                     <li>
                       <strong>{el.name}</strong>
                       <br />
-                      {el.price}
+                      <em>{el.price}</em>
                     </li>
                   ))
                 : null}
@@ -94,7 +94,7 @@ class WinesList extends Component {
                     <li>
                       <strong>{el.name}</strong>
                       <br />
-                      {el.price}
+                      <em>{el.price}</em>
                     </li>
                   ))
                 : null}

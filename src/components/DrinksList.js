@@ -43,7 +43,7 @@ class DrinksList extends Component {
                 <li>
                   <strong>{el.name}</strong>
                   <br />
-                  {el.price} {el.strength ? `(${el.strength})` : null}
+                  <em>{el.price} {el.strength ? `(${el.strength})` : null}</em>
                 </li>
               ))
             : null}
