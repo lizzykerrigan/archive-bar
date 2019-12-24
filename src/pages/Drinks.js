@@ -15,12 +15,12 @@ class Drinks extends Component {
   }
 
   render() {
-    document.title = "Drinks Menu | Archive Bar & Bottle";
+    document.title = "Drinks Menu | Archive Bar & Bottle, Cheadle Hulme";
 
     return (
       <>
         {!this.state.loaded && <Preloader />}
-        <Menu />
+        <Menu heading="Drinks"/>
         <BeerTable />
         <DrinksList listName="gins" heading="Gin" />
         <DrinksList listName="flavouredGins" heading="Flavoured Gin" />
@@ -30,6 +30,8 @@ class Drinks extends Component {
         <DrinksList listName="otherSpirits" heading="Other Spirits" />
         <WinesList listName="wines" />
         <DrinksList listName="cocktails" heading="Cocktails" />
+        <DrinksList listName="hotDrinks" heading="Hot Drinks" sortByPrice />
+        <DrinksList listName="softDrinks" heading="Soft Drinks" sortByPrice />
       </>
     );
   }
