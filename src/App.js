@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import ArchiveNav from "./components/ArchiveNav.js";
 import Drinks from "./pages/Drinks";
+import Food from "./pages/Food";
 import { Router } from "@reach/router";
 import Home from "./pages/Home";
 import { ArchiveFooter } from "./components/ArchiveFooter";
@@ -14,6 +15,7 @@ function App() {
         <Router>
           <Home path="/" />
           <Drinks path="/drinks" />
+          <Food path="/food" />
           <ContactPage path="/contact" />
         </Router>
       <ArchiveFooter />
