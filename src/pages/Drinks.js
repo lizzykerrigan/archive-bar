@@ -20,7 +20,7 @@ class Drinks extends Component {
     return (
       <>
         {!this.state.loaded && <Preloader />}
-        <Menu heading="Drinks"/>
+        <Menu heading="Drinks" />
         <BeerTable />
         <MenuList listName="gins" heading="Gin" />
         <MenuList listName="flavouredGins" heading="Flavoured Gin" />
@@ -30,8 +30,16 @@ class Drinks extends Component {
         <MenuList listName="otherSpirits" heading="Other Spirits" />
         <WinesList listName="wines" />
         <MenuList listName="cocktails" heading="Cocktails" />
-        <MenuList listName="hotDrinks" heading="Hot Drinks" sortByPrice />
-        <MenuList listName="softDrinks" heading="Soft Drinks" sortByPrice />
+        <MenuList
+          listName="hotDrinks"
+          heading="Hot Drinks"
+          sort={(a, b) => a.price.slice(1) - b.price.slice(1)}
+        />
+        <MenuList
+          listName="softDrinks"
+          heading="Soft Drinks"
+          sort={(a, b) => a.price.slice(1) - b.price.slice(1)}
+        />
       </>
     );
   }
