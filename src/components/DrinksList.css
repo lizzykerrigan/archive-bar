@@ -17,6 +17,7 @@ li {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+  margin-bottom: 20px;
 }
 
 .gins-list {
@@ -29,10 +30,22 @@ li {
   margin: 2% auto;
 }
 
+.message {
+  font-size: 1.2rem;
+  padding: 25px 15vw;
+  text-align: left;
+  font-style: italic;
+}
+
 @media screen and (max-width: 767px) {
   ul {
     padding: 0 5vw;
     column-count: 1;
+  }
+
+  .message {
+    padding: 0 5vw;
+    font-size: 1.1rem;
   }
 
   .bottom-divider {
