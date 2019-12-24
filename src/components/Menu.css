@@ -46,8 +46,8 @@
 
 .span_1_of_2 {
   width: 50%;
-  color: #202820;
-  background: #dcdcd142;
+  /* color: #202820;
+  background: #dcdcd142; */
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
