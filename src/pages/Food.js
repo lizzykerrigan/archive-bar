@@ -32,6 +32,11 @@ class Food extends Component {
           heading="Small Plates"
           message={message}
         />
+        <DrinksList
+          listName="snacks"
+          heading="Snacks &amp; Sides"
+          sort={(a, b) => a.price.slice(1) - b.price.slice(1)}
+        />
       </>
     );
   }
