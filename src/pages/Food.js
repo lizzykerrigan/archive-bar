@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Menu from "../components/Menu";
 import Preloader from "./Preloader";
-import DrinksList from "../components/DrinksList";
+import MenuList from "../components/MenuList";
 
 class Food extends Component {
   state = { loaded: false };
@@ -22,17 +22,17 @@ class Food extends Component {
       <>
         {!this.state.loaded && <Preloader />}
         <Menu heading="Food" />
-        <DrinksList
+        <MenuList
           listName="sharingPlatters"
           heading="Sharing Platters"
           sort={(a, b) => a.price.slice(1) - b.price.slice(1)}
         />
-        <DrinksList
+        <MenuList
           listName="smallPlates"
           heading="Small Plates"
           message={message}
         />
-        <DrinksList
+        <MenuList
           listName="snacks"
           heading="Snacks &amp; Sides"
           sort={(a, b) => a.price.slice(1) - b.price.slice(1)}

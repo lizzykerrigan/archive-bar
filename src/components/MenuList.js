@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./DrinksList.css";
+import "./MenuList.css";
 
 import * as contentful from "contentful";
 
 import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from "../env";
 
-class DrinksList extends Component {
+class MenuList extends Component {
   state = {
     fields: [],
     loaded: false
@@ -74,4 +74,4 @@ class DrinksList extends Component {
   }
 }
 
-export default DrinksList;
+export default MenuList;

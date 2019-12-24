@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./DrinksList.css";
+import "./MenuList.css";
 
 import * as contentful from "contentful";
 
