@@ -13,7 +13,7 @@ export default class ArchiveNav extends Component {
           <div className="navigation-wrap">
             <a href="/" className="logo-link w-nav-brand w--current">
               <img
-                src="https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df2b31406c48279515ed98f_53169366_249289682676967_8442834466077933568_n%20(1)%20(1).png"
+                src="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577184645/archive_header_logo.png"
                 width="107"
                 sizes="107px"
                 alt=""
