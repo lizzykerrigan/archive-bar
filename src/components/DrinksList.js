@@ -33,7 +33,13 @@ class DrinksList extends Component {
 
   render() {
     const { fields, loaded } = this.state;
-    fields.sort((a, b) => a.name.localeCompare(b.name));
+
+    if (this.props.sort) {
+      fields.sort(this.props.sort);
+    } else {
+      fields.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
     return (
       <div className={`drinks-list ${this.props.listName}-list`}>
         <h2>{this.props.heading}</h2>
@@ -43,11 +49,21 @@ class DrinksList extends Component {
                 <li>
                   <strong>{el.name}</strong>
                   <br />
-                  <em>{el.price} {el.strength ? `(${el.strength})` : null}</em>
+                  <em>
+                    {el.price || null} {el.strength ? `(${el.strength})` : null}
+                  </em>
+                  {el.chooseFrom ? (
+                    <>
+                      <br />
+                      <em>Choose from: {el.chooseFrom}</em>
+                    </>
+                  ) : null}
+                  {el.description ? <p>{el.description}</p> : null}
                 </li>
               ))
             : null}
         </ul>
+        {this.props.message && <p className="message">{this.props.message}</p>}
         <img
           src="divider-bottom.svg"
           aria-hidden="true"
