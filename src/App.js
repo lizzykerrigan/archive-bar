@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import ArchiveNav from "./components/ArchiveNav.js";
 import Drinks from "./pages/Drinks";
 import Food from "./pages/Food";
