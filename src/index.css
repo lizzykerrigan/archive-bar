@@ -851,7 +851,10 @@ label {
   .visible-responsive {
     display: inline-block;
     padding: 0.25em;
-}
+  }
+  .nav-icon {
+    width: 32px;
+  }
   .intro-head {
     background-position: 50% 50%;
     background-size: cover;
