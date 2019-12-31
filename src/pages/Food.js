@@ -9,9 +9,10 @@ const Food = () => {
   return (
     <section id="food-menu">
       <Menu
-        heading="Food"
+        heading="food"
         image="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577795219/75204589_394055008200433_2599243327693914112_n.jpg.jpg"
       />
+      <h1 className="section-heading">Food</h1>
       <MenuList
         listName="sharingPlatters"
         heading="Sharing Platters"

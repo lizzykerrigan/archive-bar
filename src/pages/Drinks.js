@@ -8,9 +8,10 @@ const Drinks = () => {
   return (
     <section id="drinks-menu">
       <Menu
-        heading="Drinks"
+        heading="drinks"
         image="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576941701/76935991_415094802763120_6370016677035245568_n.jpg.jpg"
       />
+      <h1 className="section-heading">Drinks</h1>
       <BeerTable />
       <MenuList listName="gins" heading="Gin" />
       <MenuList listName="flavouredGins" heading="Flavoured Gin" />
