@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import NavLink from "./NavLink";
 
 export default class ArchiveNav extends Component {
   render() {
@@ -20,24 +22,28 @@ export default class ArchiveNav extends Component {
             </a>
             <div className="menu">
               <nav role="navigation" className="navigation-items w-nav-menu">
-                <a href="#drinks-menu" className="navigation-item w-nav-link hidden-responsive">
-                  Drinks
-                </a>
-                <a href="#drinks-menu" className="navigation-item w-nav-link visible-responsive">
-                  <img src="wine.svg" aria-hidden />
-                </a>
-                <a href="#food-menu" className="navigation-item w-nav-link hidden-responsive">
-                  Food
-                </a>
-                <a href="#food-menu" className="navigation-item w-nav-link visible-responsive">
-                  <img src="restaurant.svg" aria-hidden />
-                </a>
-                <a href="#contact" className="navigation-item w-nav-link hidden-responsive">
-                  Contact
-                </a>
-                <a href="#contact" className="navigation-item w-nav-link visible-responsive">
-                  <img src="chat-alt.svg" aria-hidden />
-                </a>
+                <Router>
+                  <NavLink
+                    element="drinks-menu"
+                    linkText="Drinks"
+                    icon="wine.svg"
+                  />
+                  <NavLink
+                    element="food-menu"
+                    linkText="Food"
+                    icon="restaurant.svg"
+                  />
+                  <NavLink
+                    element="events"
+                    linkText="Events"
+                    icon="calendar.svg"
+                  />
+                  <NavLink
+                    element="contact"
+                    linkText="Contact"
+                    icon="chat-alt.svg"
+                  />
+                </Router>
               </nav>
             </div>
             <div className="menu-button w-nav-button"></div>
