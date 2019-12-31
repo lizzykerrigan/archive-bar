@@ -12,6 +12,11 @@ nav,
 section {
   display: block;
 }
+
+section {
+  padding-top: 10vh;
+}
+
 audio,
 progress,
 video {
@@ -318,7 +323,7 @@ label {
   grid-column-gap: 16px;
 }
 body {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   color: #1a1b1f;
   font-size: 16px;
   line-height: 28px;
@@ -468,7 +473,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 .logo-link {
   z-index: 1;
@@ -495,15 +500,14 @@ label {
 }
 .navigation-wrap {
   position: relative;
-  height: 50px;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   flex: 1 1;
 }
 .navigation {
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  position: fixed;
   top: 0;
   display: flex;
   width: 100%;
@@ -516,7 +520,6 @@ label {
 .navigation-item {
   padding-top: 9px;
   padding-bottom: 9px;
-  opacity: 0.85;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
   color: #fff;
@@ -545,8 +548,12 @@ label {
   opacity: 0.7;
   color: #32343a;
 }
+.visible-responsive {
+  display: none;
+}
 .logo-image {
   display: block;
+  width: 108px;
 }
 .navigation-items {
   position: absolute;
@@ -571,9 +578,7 @@ label {
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
-  background-image: url(
-    'https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576786015/5df2a4eb047f851c3e9512b0_66840947_327860078153260_.jpg'
-  );
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576786015/5df2a4eb047f851c3e9512b0_66840947_327860078153260_.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: opacity 1s ease;
@@ -631,7 +636,7 @@ label {
   font-size: 1.1rem;
 }
 .body {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 .image {
   position: relative;
@@ -771,16 +776,10 @@ label {
   }
   .w-nav-link {
     padding: 0 0.5em;
-    font-family: 'EB Garamond', serif;
-  }
-  .navigation-item:hover {
-    background-color: #f7f8f9;
-  }
-  .navigation-item:active {
-    background-color: #eef0f3;
+    font-family: "EB Garamond", serif;
   }
   .menu-button {
-    background-image: url('https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df24a759bca42254a1ea429_1200px-Hamburger_icon_white.svg.png');
+    background-image: url("https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df24a759bca42254a1ea429_1200px-Hamburger_icon_white.svg.png");
     background-position: 50% 50%;
     background-size: 30px;
     background-repeat: no-repeat;
@@ -843,6 +842,16 @@ label {
   .navigation-items {
     overflow: visible;
   }
+  .navigation-item:active {
+    opacity: 0.4;
+  }
+  .hidden-responsive {
+    display: none;
+  }
+  .visible-responsive {
+    display: inline-block;
+    padding: 0.25em;
+}
   .intro-head {
     background-position: 50% 50%;
     background-size: cover;
@@ -894,7 +903,7 @@ label {
     font-size: 0.9rem;
   }
   .menu-button {
-    background-image: url('https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df24a759bca42254a1ea429_1200px-Hamburger_icon_white.svg.png');
+    background-image: url("https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df24a759bca42254a1ea429_1200px-Hamburger_icon_white.svg.png");
     background-position: 50% 50%;
     background-size: 50%;
     background-repeat: no-repeat;
@@ -1000,7 +1009,7 @@ label {
   text-align: left;
   text-transform: none;
   height: 90vh;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 .col:first-child {
   margin-left: 0;
@@ -1008,6 +1017,7 @@ label {
 .column-img {
   object-fit: cover;
   height: inherit;
+  inline-size: -webkit-fill-available;
 }
 .group:after,
 .group:before {
@@ -1047,7 +1057,7 @@ label {
 }
 .beer-table {
   padding: 30px 0;
-  font-family: ''EB Garamond'', serif;
+  font-family: "EB Garamond", serif;
 }
 table {
   margin: auto;
