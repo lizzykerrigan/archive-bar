@@ -6,7 +6,7 @@ const ContactComponent = () => {
       <div className="w-layout-grid contact-form-grid">
         <div id="w-node-509be705858e-0bfda119" className="contact-form-wrap">
           <div className="contact-form-heading-wrap">
-            <h1 className="contact-heading">ROOM HIRE & EVENT BOOKINGS</h1>
+            <h2 className="contact-heading">ROOM HIRE & EVENT BOOKINGS</h2>
           </div>
           <div className="room-hire-details">
             <p>
