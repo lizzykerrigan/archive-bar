@@ -1,10 +1,8 @@
 import React from "react";
-import FadeInSection from "../utils/FadeInSection";
 
 const Gallery = () => {
   return (
     <div className="container-2 w-container">
-      <FadeInSection>
         <div className="columns">
             <img
               src="https://uploads-ssl.webflow.com/5df20ac39bca42668d1d0fac/5df23f4dba2fb068040e4101_62414138_307239270215341_2685487847250591744_n.jpg"
@@ -72,7 +70,6 @@ const Gallery = () => {
             className="thumb"
           />
         </div>
-      </FadeInSection>
     </div>
   );
 };
