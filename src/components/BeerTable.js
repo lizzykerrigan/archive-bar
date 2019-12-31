@@ -79,6 +79,11 @@ class BeerTable extends Component {
               : null}
           </tbody>
         </table>
+        <img
+          src="divider-bottom.svg"
+          aria-hidden="true"
+          className="bottom-divider"
+        />
       </div>
     );
   }
