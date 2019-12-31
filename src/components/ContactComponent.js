@@ -2,13 +2,13 @@ import React from "react";
 
 const ContactComponent = () => {
   return (
-    <div class="section-2">
-      <div class="w-layout-grid contact-form-grid">
-        <div id="w-node-509be705858e-0bfda119" class="contact-form-wrap">
-          <div class="contact-form-heading-wrap">
-            <h1 class="contact-heading">ROOM HIRE & EVENT BOOKINGS</h1>
+    <div className="section-2">
+      <div className="w-layout-grid contact-form-grid">
+        <div id="w-node-509be705858e-0bfda119" className="contact-form-wrap">
+          <div className="contact-form-heading-wrap">
+            <h1 className="contact-heading">ROOM HIRE & EVENT BOOKINGS</h1>
           </div>
-          <div class="room-hire-details">
+          <div className="room-hire-details">
             <p>
               Our upstairs is a prime location for meetings, parties, event
               bookings and everything in between.
@@ -29,9 +29,9 @@ const ContactComponent = () => {
           </div>
         </div>
         <div id="w-node-509be70585a6-0bfda119">
-          <div class="details-wrap">
-            <div class="label">Where we are</div>
-            <div class="paragraph-light">
+          <div className="details-wrap">
+            <div className="label">Where we are</div>
+            <div className="paragraph-light">
               2 Mellor Road
               <br />
               Cheadle Hulme
@@ -46,35 +46,35 @@ const ContactComponent = () => {
               href="https://goo.gl/maps/F7Xsf8xefBDcdHWf6"
               target="_blank"
               rel="noopener noreferrer"
-              class="link"
+              className="link"
             >
               Open in Google Maps
             </a>
           </div>
-          <div class="details-wrap">
-            <div class="label">opening HOURS</div>
-            <div class="paragraph-light">
+          <div className="details-wrap">
+            <div className="label">opening HOURS</div>
+            <div className="paragraph-light">
               12PM - 11PM, Mon to Sat
               <br />
               12PM - 10:30PM Sun
             </div>
           </div>
-          <div class="details-wrap">
-            <div class="label">CONTACT</div>
+          <div className="details-wrap">
+            <div className="label">CONTACT</div>
             <a
               href="mailto:archivebarandbottle@gmail.com"
-              class="social-media-link"
+              className="social-media-link"
             >
               archivebarandbottle@gmail.com
             </a>
           </div>
-          <div class="details-wrap">
-            <div class="label">Social media</div>
+          <div className="details-wrap">
+            <div className="label">Social media</div>
             <a
               href="https://www.facebook.com/archivebarandbottle/photos/?ref=page_internal"
               target="_blank"
               rel="noopener noreferrer"
-              class="social-media-link"
+              className="social-media-link"
             >
               Facebook
             </a>
@@ -82,7 +82,7 @@ const ContactComponent = () => {
               href="https://www.instagram.com/archivebarandbottle/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              class="social-media-link"
+              className="social-media-link"
             >
               Instagram
             </a>
@@ -90,7 +90,7 @@ const ContactComponent = () => {
               href="https://twitter.com/archive_bar?lang=en"
               target="_blank"
               rel="noopener noreferrer"
-              class="social-media-link"
+              className="social-media-link"
             >
               Twitter
             </a>

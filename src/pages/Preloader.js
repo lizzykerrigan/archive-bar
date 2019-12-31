@@ -2,7 +2,7 @@ import React from "react";
 
 const Preloader = () => {
   return (
-    <div class="preloader">
+    <div className="preloader">
       <img src="tailspin.svg" alt="spinner" />
     </div>
   );
