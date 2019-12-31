@@ -57,7 +57,11 @@ class BeerTable extends Component {
         <table>
           <thead>
             <tr>
-              {loaded ? headings.map(heading => <th>{heading}</th>) : null}
+              {loaded
+                ? headings.map((heading, index) => (
+                    <th key={index}>{heading}</th>
+                  ))
+                : null}
             </tr>
           </thead>
           <tbody>

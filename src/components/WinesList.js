@@ -48,8 +48,8 @@ class WinesList extends Component {
         <h3>Red</h3>
         <ul>
           {loaded
-            ? this.filterWines(fields, "red").map(el => (
-                <li>
+            ? this.filterWines(fields, "red").map((el,index) => (
+                <li key={index}>
                   <strong>{el.name}</strong>
                   <br />
                   <em>{el.price}</em>
@@ -60,8 +60,8 @@ class WinesList extends Component {
         <h3>White</h3>
         <ul>
           {loaded
-            ? this.filterWines(fields, "white").map(el => (
-                <li>
+            ? this.filterWines(fields, "white").map((el, index) => (
+                <li key={index}>
                   <strong>{el.name}</strong>
                   <br />
                   <em>{el.price}</em>
@@ -74,8 +74,8 @@ class WinesList extends Component {
             <h3>Rosé</h3>
             <ul className="single-col">
               {loaded
-                ? this.filterWines(fields, "rose").map(el => (
-                    <li>
+                ? this.filterWines(fields, "rose").map((el, index) => (
+                    <li key={index}>
                       <strong>{el.name}</strong>
                       <br />
                       <em>{el.price}</em>
@@ -90,8 +90,8 @@ class WinesList extends Component {
             <h3>Fizz</h3>
             <ul className="single-col">
               {loaded
-                ? this.filterWines(fields, "fizz").map(el => (
-                    <li>
+                ? this.filterWines(fields, "fizz").map((el, index) => (
+                    <li key={index}>
                       <strong>{el.name}</strong>
                       <br />
                       <em>{el.price}</em>

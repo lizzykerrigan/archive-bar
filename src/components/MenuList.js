@@ -45,8 +45,8 @@ class MenuList extends Component {
         <h2>{this.props.heading}</h2>
         <ul className={this.props.class ? this.props.class : null}>
           {loaded
-            ? fields.map(el => (
-                <li>
+            ? fields.map((el, index) => (
+                <li key={index}>
                   <strong>{el.name}</strong>
                   <br />
                   <em>
