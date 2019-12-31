@@ -22,7 +22,7 @@ const Home = () => {
       {!loaded && <Preloader />}
       <MainPageIntro />
       <MainPageDescription />
-      <Gallery />
+      {/* <Gallery /> */}
       <Drinks />
       <Food />
       <ContactPage />
