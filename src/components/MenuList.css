@@ -85,4 +85,9 @@ li {
   .single-col {
     text-align: left;
   }
+
+  .bg-img-food,
+  .bg-img-drinks {
+    background-attachment: scroll;
+  }
 }
