@@ -50,7 +50,8 @@ li {
 
 .bg-img-food,
 .bg-img-drinks,
-.bg-img-contact {
+.bg-img-contact,
+.bg-img-events {
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -68,7 +69,12 @@ li {
 }
 
 .bg-img-contact {
-  background-image: url('https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830039/70701255_366692464270021_3674081789988569088_n.jpg.jpg');
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830039/70701255_366692464270021_3674081789988569088_n.jpg.jpg");
+}
+
+.bg-img-events {
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830843/60775988_288923448713590_1372028672801767424_n.jpg.jpg");
+  background-position: top;
 }
 
 @media screen and (max-width: 767px) {
@@ -93,7 +99,8 @@ li {
 
   .bg-img-food,
   .bg-img-drinks,
-  .bg-img-contact {
+  .bg-img-contact,
+  .bg-img-events {
     background-attachment: scroll;
   }
 }
