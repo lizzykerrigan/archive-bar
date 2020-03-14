@@ -1,0 +1,106 @@
+ul {
+  list-style-type: none;
+  font-size: 1.2rem;
+  column-count: 3;
+  padding: 0 15vw;
+  column-rule: 1px double #1f1f1f;
+  column-gap: 10%;
+  text-align: left;
+}
+
+.single-col {
+  columns: 1;
+  text-align: center;
+}
+
+li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+.bottom-divider {
+  width: 40%;
+  height: auto;
+  margin: 2% auto;
+}
+
+.message {
+  font-size: 1.2rem;
+  padding: 25px 15vw;
+  text-align: left;
+  font-style: italic;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.bg-img-food,
+.bg-img-drinks,
+.bg-img-contact,
+.bg-img-events {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+}
+
+.bg-img-food {
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577795219/75204589_394055008200433_2599243327693914112_n.jpg.jpg");
+}
+
+.bg-img-drinks {
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576941701/76935991_415094802763120_6370016677035245568_n.jpg.jpg");
+}
+
+.bg-img-contact {
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830039/70701255_366692464270021_3674081789988569088_n.jpg.jpg");
+}
+
+.bg-img-events {
+  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830843/60775988_288923448713590_1372028672801767424_n.jpg.jpg");
+  background-position: top;
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    padding: 0 5vw;
+    column-count: 1;
+  }
+
+  .message {
+    padding: 0 5vw;
+    font-size: 1.1rem;
+  }
+
+  .bottom-divider {
+    width: 75%;
+    margin: 10% auto;
+  }
+
+  .single-col {
+    text-align: left;
+  }
+
+  .bg-img-food,
+  .bg-img-drinks,
+  .bg-img-contact,
+  .bg-img-events {
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,81 @@
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  font-size: 26px;
+  line-height: 50px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: none;
+  height: 90vh;
+  font-family: "EB Garamond", serif;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+.column-img {
+  object-fit: cover;
+  height: inherit;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 50%;
+}
+
+.span_1_of_2 {
+  width: 50%;
+  /* color: #202820;
+  background: #dcdcd142; */
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .span_1_of_2 {
+    width: 100%;
+  }
+  .span_2_of_2 {
+      display: none;
+  }
+}
+
+.menu-heading {
+  font-size: 2em;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding-left: 0;
+}
