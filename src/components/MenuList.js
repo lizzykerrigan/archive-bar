@@ -3,7 +3,7 @@ import "./MenuList.css";
 
 import * as contentful from "contentful";
 
-import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from "../env";
+import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from "../../env";
 
 class MenuList extends Component {
   state = {
