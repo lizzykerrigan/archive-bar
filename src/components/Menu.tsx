@@ -1,7 +1,7 @@
 import React from "react";
 import "./Menu.css";
 
-const Menu = ({ heading, image }) => {
+const Menu = ({ heading }: { heading: string }) => {
   return (
     <div className="section group">
       <div className="container-fluid">
