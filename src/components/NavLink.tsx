@@ -1,7 +1,13 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
-const NavLink = ({element, icon, linkText}) => {
+type NavLinkTypes = {
+  element: string;
+  icon: string;
+  linkText: string;
+};
+
+const NavLink = ({ element, icon, linkText }: NavLinkTypes) => {
   return (
     <>
       <Link

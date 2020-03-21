@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MainPageDescription from "../components/MainPageDescription";
 import MainPageIntro from "../components/MainPageIntro";
-import Gallery from "../components/Gallery";
 import Drinks from "./Drinks";
 import Food from "./Food";
 import Preloader from "./Preloader";
@@ -23,7 +22,6 @@ const Home = () => {
       {!loaded && <Preloader />}
       <MainPageIntro />
       <MainPageDescription />
-      {/* <Gallery /> */}
       <Drinks />
       <Food />
       <EventsSection />

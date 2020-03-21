@@ -1,45 +1,45 @@
-import React, { Component } from "react";
-import "./BeerTable.css";
+import React, { Component } from 'react';
+import './BeerTable.css';
 
-import * as contentful from "contentful";
+import * as contentful from 'contentful';
 
-import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from "../../env";
+import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from '../env';
 
 class BeerTable extends Component {
   state = {
     fields: [],
     headings: [],
-    loaded: false
+    loaded: false,
   };
 
   client = contentful.createClient({
     space: REACT_APP_CTF_SPACE,
-    accessToken: REACT_APP_CTF_CDA_TOKEN
+    accessToken: REACT_APP_CTF_CDA_TOKEN,
   });
 
   componentDidMount() {
     this.fetchPosts().then(this.setPosts);
   }
 
-  fetchPosts = () => this.client.getEntries({ content_type: "pouring" });
+  fetchPosts = () => this.client.getEntries({ content_type: 'pouring' });
 
-  setPosts = response => {
+  setPosts = (response: { items: any[] }) => {
     const fields = response.items.map(el => el.fields);
     this.setState({
       fields,
       headings: Object.keys(fields[0]),
-      loaded: true
+      loaded: true,
     });
   };
 
-  compareFieldsByLineNumber = (a, b) => {
+  compareFieldsByLineNumber = (a: any = {}, b: any = {}) => {
     const lineA = a.line.slice(-2);
     const lineB = b.line.slice(-2);
 
     return lineA - lineB;
   };
 
-  compareFieldsByLineType = (a, b) => {
+  compareFieldsByLineType = (a: any = {}, b: any = {}) => {
     const lineA = a.line.slice(0, 4).toUpperCase();
     const lineB = b.line.slice(0, 4).toUpperCase();
     return lineB.localeCompare(lineA);
@@ -66,16 +66,18 @@ class BeerTable extends Component {
           </thead>
           <tbody>
             {loaded
-              ? fields.map((el, index) => (
-                  <tr key={index}>
-                    <td>{el.line}</td>
-                    <td>{el.beer}</td>
-                    <td>{el.style}</td>
-                    <td>{el.brewery}</td>
-                    <td>{el.strength}</td>
-                    <td>{el.price}</td>
-                  </tr>
-                ))
+              ? fields.map(
+                  ({ line, beer, style, brewery, strength, price }, index) => (
+                    <tr key={index}>
+                      <td>{line}</td>
+                      <td>{beer}</td>
+                      <td>{style}</td>
+                      <td>{brewery}</td>
+                      <td>{strength}</td>
+                      <td>{price}</td>
+                    </tr>
+                  ),
+                )
               : null}
           </tbody>
         </table>

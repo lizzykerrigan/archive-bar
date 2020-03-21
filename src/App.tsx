@@ -1,5 +1,5 @@
 import React from "react";
-import ArchiveNav from "./components/ArchiveNav.js";
+import ArchiveNav from "./components/ArchiveNav";
 import Home from "./pages/Home";
 import { ArchiveFooter } from "./components/ArchiveFooter";
 
