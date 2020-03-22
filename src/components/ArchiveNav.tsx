@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import NavLink from "./NavLink";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavLink from './NavLink';
 
-const ArchiveNav = () =>
+const ArchiveNav = () => (
   <>
     <div
       data-collapse="medium"
@@ -31,11 +31,7 @@ const ArchiveNav = () =>
                 linkText="Food"
                 icon="restaurant.svg"
               />
-              <NavLink
-                element="events"
-                linkText="Events"
-                icon="calendar.svg"
-              />
+              <NavLink element="events" linkText="Events" icon="calendar.svg" />
               <NavLink
                 element="contact"
                 linkText="Contact"
@@ -49,5 +45,6 @@ const ArchiveNav = () =>
       <div className="w-nav-overlay" data-wf-ignore=""></div>
     </div>
   </>
+);
 
 export default ArchiveNav;

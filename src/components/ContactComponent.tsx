@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const ContactComponent = () =>
+const ContactComponent = () => (
   <div className="section-2">
     <div className="w-layout-grid contact-form-grid">
       <div id="w-node-509be705858e-0bfda119" className="contact-form-wrap">
@@ -11,20 +11,20 @@ const ContactComponent = () =>
           <p>
             Our upstairs is a prime location for meetings, parties, event
             bookings and everything in between.
-            </p>
+          </p>
           <br />
           <p>
-            We can host up to 40 guests and completely tailor a package to
-            suit both your food and drink needs.
-            </p>
+            We can host up to 40 guests and completely tailor a package to suit
+            both your food and drink needs.
+          </p>
           <br />
           <p>
-            Please{" "}
+            Please{' '}
             <a href="mailto:archivebarandbottle@gmail.com">
               contact us at archivebarandbottle@gmail.com
-              </a>{" "}
-              to find out how we can accommodate you.
-            </p>
+            </a>{' '}
+            to find out how we can accommodate you.
+          </p>
         </div>
       </div>
       <div id="w-node-509be70585a6-0bfda119">
@@ -32,15 +32,15 @@ const ContactComponent = () =>
           <div className="label">Where we are</div>
           <div className="paragraph-light">
             2 Mellor Road
-              <br />
-              Cheadle Hulme
-              <br />
-              Cheadle
-              <br />
-              SK8 5AU
-              <br />
-              United Kingdom
-            </div>
+            <br />
+            Cheadle Hulme
+            <br />
+            Cheadle
+            <br />
+            SK8 5AU
+            <br />
+            United Kingdom
+          </div>
           <a
             href="https://goo.gl/maps/F7Xsf8xefBDcdHWf6"
             target="_blank"
@@ -48,15 +48,15 @@ const ContactComponent = () =>
             className="link"
           >
             Open in Google Maps
-            </a>
+          </a>
         </div>
         <div className="details-wrap">
           <div className="label">opening HOURS</div>
           <div className="paragraph-light">
             12PM - 11PM, Mon to Sat
-              <br />
-              12PM - 10:30PM Sun
-            </div>
+            <br />
+            12PM - 10:30PM Sun
+          </div>
         </div>
         <div className="details-wrap">
           <div className="label">CONTACT</div>
@@ -65,7 +65,7 @@ const ContactComponent = () =>
             className="social-media-link"
           >
             archivebarandbottle@gmail.com
-            </a>
+          </a>
         </div>
         <div className="details-wrap">
           <div className="label">Social media</div>
@@ -76,7 +76,7 @@ const ContactComponent = () =>
             className="social-media-link"
           >
             Facebook
-            </a>
+          </a>
           <a
             href="https://www.instagram.com/archivebarandbottle/?hl=en"
             target="_blank"
@@ -84,7 +84,7 @@ const ContactComponent = () =>
             className="social-media-link"
           >
             Instagram
-            </a>
+          </a>
           <a
             href="https://twitter.com/archive_bar?lang=en"
             target="_blank"
@@ -92,10 +92,11 @@ const ContactComponent = () =>
             className="social-media-link"
           >
             Twitter
-            </a>
+          </a>
         </div>
       </div>
     </div>
   </div>
+);
 
 export default ContactComponent;

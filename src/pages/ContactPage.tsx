@@ -1,6 +1,6 @@
-import React from "react";
-import ContactComponent from "../components/ContactComponent";
-import Menu from "../components/Menu";
+import React from 'react';
+import ContactComponent from '../components/ContactComponent';
+import Menu from '../components/Menu';
 
 export const ContactPage = () => {
   return (

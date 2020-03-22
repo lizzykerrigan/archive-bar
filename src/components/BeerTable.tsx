@@ -37,19 +37,25 @@ const BeerTable = ({ listName }: BeerTableProps) => {
     'price',
   ];
 
-  const compareFieldsByLineNumber = (a: any = {}, b: any = {}): number => {
+  const compareFieldsByLineNumber = (
+    a: { line: string },
+    b: { line: string },
+  ): number => {
     // check line number
     // return in ascending order
     const lineA = a.line.slice(-2);
     const lineB = b.line.slice(-2);
-    return lineA - lineB;
+    return Number(lineA) - Number(lineB);
   };
 
-  const compareFieldsByLineType = (a: any = {}, b: any = {}): number => {
+  const compareFieldsByLineType = (
+    a: { line: string },
+    b: { line: string },
+  ): number => {
     // checks if line type is cask or keg
     // return keg above cask on table
-    const lineA = a.line.slice(0, 4).toUpperCase();
-    const lineB = b.line.slice(0, 4).toUpperCase();
+    const lineA: string = a.line.slice(0, 4).toUpperCase();
+    const lineB: string = b.line.slice(0, 4).toUpperCase();
     return lineB.localeCompare(lineA);
   };
 
