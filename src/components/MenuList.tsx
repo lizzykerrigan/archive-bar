@@ -14,11 +14,11 @@ type MenuListProps = {
 };
 
 interface MenuItem {
-  name: string,
-  price: string,
-  description?: string,
-  strength?: string,
-  chooseFrom?: string,
+  name: string;
+  price: string;
+  description?: string;
+  strength?: string;
+  chooseFrom?: string;
 }
 
 const MenuList = ({
@@ -37,16 +37,15 @@ const MenuList = ({
   });
 
   useEffect(() => {
+    const getEntries = (): void => {
+      client.getEntries({ content_type: listName }).then(response => {
+        const fields = response.items.map(el => el.fields);
+        setFields(fields);
+      });
+    };
     getEntries();
     setLoaded(true);
-  }, []);
-
-  const getEntries = () => {
-    client.getEntries({ content_type: listName }).then(response => {
-      const fields = response.items.map(el => el.fields);
-      setFields(fields);
-    });
-  };
+  }, [client, listName]);
 
   if (sort) {
     fields.sort((a, b) => a.price.slice(1) - b.price.slice(1));

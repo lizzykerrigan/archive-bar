@@ -19,21 +19,20 @@ const WinesList = ({ listName }: WineListProps) => {
   });
 
   useEffect(() => {
+    const getEntries = (): void => {
+      client.getEntries({ content_type: listName }).then(response => {
+        const fields = response.items.map(el => el.fields);
+        setFields(fields);
+      });
+    };
     getEntries();
     setLoaded(true);
-  });
-
-  const getEntries = () => {
-    client.getEntries({ content_type: listName }).then(response => {
-      const fields = response.items.map(el => el.fields);
-      setFields(fields);
-    });
-  };
+  }, [client, listName]);
 
   const filterWines = (
     fields: { name: string; price: string; type: string }[],
     type: string,
-  ) => {
+  ): { name: string; price: string; type: string }[] => {
     return fields.filter(
       entry => entry.type.toUpperCase() === type.toUpperCase(),
     );
@@ -104,6 +103,7 @@ const WinesList = ({ listName }: WineListProps) => {
         src="divider-bottom.svg"
         aria-hidden="true"
         className="bottom-divider"
+        alt=""
       />
     </div>
   );
