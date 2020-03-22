@@ -9,7 +9,7 @@ const Drinks = () => {
     <section id="drinks-menu">
       <Menu heading="drinks" />
       <h1 className="section-heading">Drinks</h1>
-      <BeerTable />
+      <BeerTable listName="pouring" />
       <MenuList listName="gins" heading="Gin" />
       <MenuList listName="flavouredGins" heading="Flavoured Gin" />
       <MenuList listName="rum" heading="Rum" />
