@@ -13,14 +13,6 @@ type MenuListProps = {
   sort?: boolean;
 };
 
-interface MenuItem {
-  name: string;
-  price: string;
-  description?: string;
-  strength?: string;
-  chooseFrom?: string;
-}
-
 const MenuList = ({
   className,
   heading,
@@ -29,7 +21,7 @@ const MenuList = ({
   sort,
 }: MenuListProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState(Array());
+  const [fields, setFields] = useState<any[]>([]);
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -45,7 +37,6 @@ const MenuList = ({
     getEntries();
     setLoaded(true);
   }, [listName]);
-
 
   if (sort) {
     fields.sort((a, b) => a.price.slice(1) - b.price.slice(1));

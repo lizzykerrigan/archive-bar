@@ -11,7 +11,7 @@ type WineListProps = {
 
 const WinesList = ({ listName }: WineListProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState(Array());
+  const [fields, setFields] = useState<any[]>([]);
 
   useEffect(() => {
     const client = contentful.createClient({
