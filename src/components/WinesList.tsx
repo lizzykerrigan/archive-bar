@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './MenuList.css';
-
-import * as contentful from 'contentful';
-
-import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from '../base';
+import fetchPosts from '../api';
 
 type WineListProps = {
   listName: string;
@@ -14,17 +11,7 @@ const WinesList = ({ listName }: WineListProps) => {
   const [fields, setFields] = useState<any[]>([]);
 
   useEffect(() => {
-    const client = contentful.createClient({
-      space: REACT_APP_CTF_SPACE,
-      accessToken: REACT_APP_CTF_CDA_TOKEN,
-    });
-    const getEntries = (): void => {
-      client.getEntries({ content_type: listName }).then(response => {
-        const fields = response.items.map(el => el.fields);
-        setFields(fields);
-      });
-    };
-    getEntries();
+    fetchPosts(listName).then(response => setFields(response));
     setLoaded(true);
   }, [listName]);
 
