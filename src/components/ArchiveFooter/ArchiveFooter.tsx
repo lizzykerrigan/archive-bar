@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const ArchiveFooter = () => (
+const ArchiveFooter = () => (
   <footer className="section-2">
     <div className="footer-section">
       <div className="footer-wrap">
-        <p className="paragraph-tiny">
+        <p className="paragraph-tiny" data-testid="footer-text">
           Site by Lizzy Kerrigan
           <br />© 2020
         </p>
@@ -12,3 +12,5 @@ export const ArchiveFooter = () => (
     </div>
   </footer>
 );
+
+export default ArchiveFooter;
