@@ -3,7 +3,7 @@ import './MenuList.css';
 
 import * as contentful from 'contentful';
 
-import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from '../env';
+import { REACT_APP_CTF_SPACE, REACT_APP_CTF_CDA_TOKEN } from '../base';
 
 type MenuListProps = {
   className?: string;
@@ -25,8 +25,8 @@ const MenuList = ({
 
   useEffect(() => {
     const client = contentful.createClient({
-      space: REACT_APP_CTF_SPACE,
       accessToken: REACT_APP_CTF_CDA_TOKEN,
+      space: REACT_APP_CTF_SPACE,
     });
     const getEntries = (): void => {
       client.getEntries({ content_type: listName }).then(response => {
