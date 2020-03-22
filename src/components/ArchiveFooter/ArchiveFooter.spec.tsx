@@ -3,7 +3,7 @@ import ArchiveFooter from './ArchiveFooter';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-test('shows the children when the checkbox is checked', () => {
+test('Displays the correct text in the footer', () => {
   render(<ArchiveFooter />);
 
   expect(screen.getByTestId('footer-text').textContent).toBe(
