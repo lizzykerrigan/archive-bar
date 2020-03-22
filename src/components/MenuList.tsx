@@ -31,12 +31,11 @@ const MenuList = ({
   const [loaded, setLoaded] = useState(false);
   const [fields, setFields] = useState(Array());
 
-  const client = contentful.createClient({
-    space: REACT_APP_CTF_SPACE,
-    accessToken: REACT_APP_CTF_CDA_TOKEN,
-  });
-
   useEffect(() => {
+    const client = contentful.createClient({
+      space: REACT_APP_CTF_SPACE,
+      accessToken: REACT_APP_CTF_CDA_TOKEN,
+    });
     const getEntries = (): void => {
       client.getEntries({ content_type: listName }).then(response => {
         const fields = response.items.map(el => el.fields);
@@ -45,7 +44,8 @@ const MenuList = ({
     };
     getEntries();
     setLoaded(true);
-  }, [client, listName]);
+  }, [listName]);
+
 
   if (sort) {
     fields.sort((a, b) => a.price.slice(1) - b.price.slice(1));

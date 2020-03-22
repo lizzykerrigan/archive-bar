@@ -13,12 +13,11 @@ const WinesList = ({ listName }: WineListProps) => {
   const [loaded, setLoaded] = useState(false);
   const [fields, setFields] = useState(Array());
 
-  const client = contentful.createClient({
-    space: REACT_APP_CTF_SPACE,
-    accessToken: REACT_APP_CTF_CDA_TOKEN,
-  });
-
   useEffect(() => {
+    const client = contentful.createClient({
+      space: REACT_APP_CTF_SPACE,
+      accessToken: REACT_APP_CTF_CDA_TOKEN,
+    });
     const getEntries = (): void => {
       client.getEntries({ content_type: listName }).then(response => {
         const fields = response.items.map(el => el.fields);
@@ -27,7 +26,7 @@ const WinesList = ({ listName }: WineListProps) => {
     };
     getEntries();
     setLoaded(true);
-  }, [client, listName]);
+  }, [listName]);
 
   const filterWines = (
     fields: { name: string; price: string; type: string }[],
