@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import MainPageDescription from '../components/MainPageDescription';
-import MainPageIntro from '../components/MainPageIntro';
-import Drinks from './Drinks';
-import Food from './Food';
-import Preloader from './Preloader';
-import { ContactPage } from './ContactPage';
-import EventsSection from './Events';
+import MainPageDescription from '../../components/MainPageDescription';
+import MainPageIntro from '../../components/MainPageIntro';
+import Drinks from '../Drinks';
+import Food from '../Food';
+import Preloader from '../Preloader';
+import ContactPage from '../ContactPage';
+import EventsSection from '../Events';
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false);

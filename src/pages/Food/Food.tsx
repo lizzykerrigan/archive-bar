@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from '../components/Menu';
-import MenuList from '../components/MenuList';
+import Menu from '../../components/Menu';
+import MenuList from '../../components/MenuList';
 
 const Food = () => {
   const message =

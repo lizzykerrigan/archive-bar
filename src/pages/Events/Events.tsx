@@ -1,13 +1,13 @@
 import React from 'react';
-import ContactComponent from '../components/ContactComponent';
-import Menu from '../components/Menu';
+import Contact from '../../components/Contact';
+import Menu from '../../components/Menu';
 
 const EventsSection = () => {
   return (
     <section id="events">
       <Menu heading="events" />
       <h1>EVENTS</h1>
-      <ContactComponent />
+      <Contact />
     </section>
   );
 };

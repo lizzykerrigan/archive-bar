@@ -1,8 +1,8 @@
 import React from 'react';
-import Menu from '../components/Menu';
-import BeerTable from '../components/BeerTable';
-import MenuList from '../components/MenuList';
-import WinesList from '../components/WinesList';
+import Menu from '../../components/Menu';
+import BeerTable from '../../components/BeerTable';
+import MenuList from '../../components/MenuList';
+import WinesList from '../../components/WinesList';
 
 const Drinks = () => {
   return (
