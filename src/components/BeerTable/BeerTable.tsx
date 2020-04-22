@@ -7,9 +7,18 @@ type BeerTableProps = {
   listName: string;
 };
 
+interface Beer {
+  beer: string;
+  brewery: string;
+  line: string;
+  price: string;
+  strength: string;
+  style: string;
+}
+
 const BeerTable = ({ listName }: BeerTableProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<any[]>([]);
+  const [fields, setFields] = useState<Beer[]>([]);
 
   useEffect(() => {
     fetchPosts(listName).then(response => setFields(response));

@@ -11,6 +11,14 @@ type MenuListProps = {
   sort?: boolean;
 };
 
+interface MenuItem {
+  name: string;
+  price: string;
+  description?: string;
+  chooseFrom?: string;
+  strength?: string;
+}
+
 const MenuList = ({
   className,
   heading,
@@ -19,7 +27,7 @@ const MenuList = ({
   sort,
 }: MenuListProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<any[]>([]);
+  const [fields, setFields] = useState<MenuItem[]>([]);
 
   useEffect(() => {
     fetchPosts(listName).then(response => setFields(response));
@@ -27,8 +35,10 @@ const MenuList = ({
   }, [listName]);
 
   if (sort) {
-    fields.sort((a, b) => a.price.slice(1) - b.price.slice(1));
+    // if sort prop exists, sort by price
+    fields.sort((a, b) => a.price.localeCompare(b.price));
   } else {
+    // otherwise, sort by name
     fields.sort((a, b) => a.name.localeCompare(b.name));
   }
 
