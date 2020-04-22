@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './MenuList.css';
-import fetchPosts from '../api';
+import '../../styles/MenuList.css';
+import fetchPosts from '../../api';
 
 type WineListProps = {
   listName: string;

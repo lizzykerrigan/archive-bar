@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactComponent = () => (
+const Contact = () => (
   <div className="section-2">
     <div className="w-layout-grid contact-form-grid">
       <div id="w-node-509be705858e-0bfda119" className="contact-form-wrap">
@@ -99,4 +99,4 @@ const ContactComponent = () => (
   </div>
 );
 
-export default ContactComponent;
+export default Contact;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './MenuList.css';
+import '../../styles/MenuList.css';
 
-import fetchPosts from '../api';
+import fetchPosts from '../../api';
 
 type MenuListProps = {
   className?: string;
