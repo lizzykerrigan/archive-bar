@@ -6,9 +6,16 @@ type WineListProps = {
   listName: string;
 };
 
+interface Wine {
+  name: string;
+  price: string;
+  type: string;
+  id: number;
+}
+
 const WinesList = ({ listName }: WineListProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<any[]>([]);
+  const [fields, setFields] = useState<Wine[]>([]);
 
   useEffect(() => {
     fetchPosts(listName).then(response => setFields(response));
@@ -24,7 +31,7 @@ const WinesList = ({ listName }: WineListProps) => {
     );
   };
 
-  fields.sort((a, b) => a.price.slice(-5) - b.price.slice(-5));
+  fields.sort((first, second) => first.id - second.id);
 
   return (
     <div className={`drinks-list wines-list`}>
