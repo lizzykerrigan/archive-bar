@@ -46,24 +46,23 @@ const MenuList = ({
     <div className={`drinks-list ${listName}-list`}>
       <h2>{heading}</h2>
       <ul className={className ?? ''}>
-        {loaded
-          ? fields.map((el, index) => (
-              <li key={index}>
-                <strong>{el.name}</strong>
-                <br />
-                <em>
-                  {el.price || null} {el.strength ? `(${el.strength})` : null}
-                </em>
-                {el.chooseFrom ? (
-                  <>
-                    <br />
-                    <em>Choose from: {el.chooseFrom}</em>
-                  </>
-                ) : null}
-                {el.description ? <p>{el.description}</p> : null}
-              </li>
-            ))
-          : null}
+        {loaded &&
+          fields.map((el, index) => (
+            <li key={index}>
+              <strong>{el.name}</strong>
+              <br />
+              <em>
+                {el.price ?? ''} {el.strength && `(${el.strength})`}
+              </em>
+              {el.chooseFrom && (
+                <>
+                  <br />
+                  <em>Choose from: {el.chooseFrom}</em>
+                </>
+              )}
+              {el.description && <p>{el.description}</p>}
+            </li>
+          ))}
       </ul>
       {message && <p className="message">{message}</p>}
       <img
