@@ -5,7 +5,7 @@ import Drinks from '../Drinks';
 import Food from '../Food';
 import Preloader from '../Preloader';
 import ContactPage from '../ContactPage';
-import EventsSection from '../Events';
+// import EventsSection from '../Events';
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
@@ -24,7 +24,7 @@ const Home = () => {
       <MainPageDescription />
       <Drinks />
       <Food />
-      <EventsSection />
+      {/* <EventsSection /> */}
       <ContactPage />
     </>
   );

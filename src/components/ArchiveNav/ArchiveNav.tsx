@@ -31,7 +31,7 @@ const ArchiveNav = () => (
                 linkText="Food"
                 icon="restaurant.svg"
               />
-              <NavLink element="events" linkText="Events" icon="calendar.svg" />
+              {/* <NavLink element="events" linkText="Events" icon="calendar.svg" /> */}
               <NavLink
                 element="contact"
                 linkText="Contact"

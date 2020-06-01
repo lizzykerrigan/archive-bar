@@ -7,7 +7,7 @@ const EventsSection = () => {
     <section id="events">
       <Menu heading="events" />
       <h1>EVENTS</h1>
-      <Contact />
+      // todo
     </section>
   );
 };
