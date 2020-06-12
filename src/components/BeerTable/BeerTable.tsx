@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './BeerTable.css';
-import { GetData } from '../../lib/GetData';
+
+import fetchPosts from '../../api';
 
 type BeerTableProps = {
   listName: string;
 };
 
+interface Beer {
+  beer: string;
+  brewery: string;
+  line: string;
+  price: string;
+  strength: string;
+  style: string;
+}
+
 const BeerTable = ({ listName }: BeerTableProps) => {
-  const { fields, loaded } = GetData(listName);
+  const [loaded, setLoaded] = useState(false);
+  const [fields, setFields] = useState<Beer[]>([]);
+
+  useEffect(() => {
+    fetchPosts(listName).then(response => setFields(response));
+    setLoaded(true);
+  }, [listName]);
 
   const headings: string[] = [
     'line',
@@ -18,32 +34,55 @@ const BeerTable = ({ listName }: BeerTableProps) => {
     'price',
   ];
 
-  fields.sort((a, b) => a.id - b.id);
+  const compareFieldsByLineNumber = (
+    a: { line: string },
+    b: { line: string },
+  ): number => {
+    // check line number
+    // return in ascending order
+    const lineA = a.line.slice(-2);
+    const lineB = b.line.slice(-2);
+    return Number(lineA) - Number(lineB);
+  };
 
-  return loaded ? (
+  const compareFieldsByLineType = (
+    a: { line: string },
+    b: { line: string },
+  ): number => {
+    // checks if line type is cask or keg
+    // return keg above cask on table
+    const lineA: string = a.line.slice(0, 4).toUpperCase();
+    const lineB: string = b.line.slice(0, 4).toUpperCase();
+    return lineB.localeCompare(lineA);
+  };
+
+  fields.sort(compareFieldsByLineNumber).sort(compareFieldsByLineType);
+
+  return (
     <div className="beer-table">
       <h2>Beer Board</h2>
       <table>
         <thead>
           <tr>
-            {headings.map((heading, index) => (
-              <th key={index}>{heading}</th>
-            ))}
+            {loaded &&
+              headings.map((heading, index) => <th key={index}>{heading}</th>)}
           </tr>
         </thead>
         <tbody>
-          {fields.map(
-            ({ line, beer, style, brewery, strength, price }, index) => (
-              <tr key={index}>
-                <td>{line}</td>
-                <td>{beer}</td>
-                <td>{style}</td>
-                <td>{brewery}</td>
-                <td>{strength}</td>
-                <td>{price}</td>
-              </tr>
-            ),
-          )}
+          {loaded
+            ? fields.map(
+                ({ line, beer, style, brewery, strength, price }, index) => (
+                  <tr key={index}>
+                    <td>{line}</td>
+                    <td>{beer}</td>
+                    <td>{style}</td>
+                    <td>{brewery}</td>
+                    <td>{strength}</td>
+                    <td>{price}</td>
+                  </tr>
+                ),
+              )
+            : null}
         </tbody>
       </table>
       <img
@@ -52,7 +91,7 @@ const BeerTable = ({ listName }: BeerTableProps) => {
         className="bottom-divider"
       />
     </div>
-  ) : null;
+  );
 };
 
 export default BeerTable;
