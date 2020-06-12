@@ -1,33 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../styles/MenuList.css';
-import fetchPosts from '../../api';
+import { GetData } from '../../lib/GetData';
 
 type WineListProps = {
   listName: string;
 };
 
-interface Wine {
-  name: string;
-  price: string;
-  type: string;
-  id: number;
-}
-
 const WinesList = ({ listName }: WineListProps) => {
-  const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<Wine[]>([]);
+  const { fields, loaded } = GetData(listName);
 
-  useEffect(() => {
-    fetchPosts(listName).then(response => setFields(response));
-    setLoaded(true);
-  }, [listName]);
-
-  const filterWines = (
-    fields: { name: string; price: string; type: string }[],
-    type: string,
-  ): { name: string; price: string; type: string }[] => {
+  const filterWines = (fields: any[], type: string) => {
     return fields.filter(
-      entry => entry.type.toUpperCase() === type.toUpperCase(),
+      (entry: { type: string }) =>
+        entry.type.toUpperCase() === type.toUpperCase(),
     );
   };
 

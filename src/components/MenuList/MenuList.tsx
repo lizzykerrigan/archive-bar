@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../styles/MenuList.css';
-
-import fetchPosts from '../../api';
+import { GetData } from '../../lib/GetData';
 
 type MenuListProps = {
   className?: string;
@@ -11,14 +10,6 @@ type MenuListProps = {
   sort?: boolean;
 };
 
-interface MenuItem {
-  name: string;
-  price: string;
-  description?: string;
-  chooseFrom?: string;
-  strength?: string;
-}
-
 const MenuList = ({
   className,
   heading,
@@ -26,13 +17,7 @@ const MenuList = ({
   message,
   sort,
 }: MenuListProps) => {
-  const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<MenuItem[]>([]);
-
-  useEffect(() => {
-    fetchPosts(listName).then(response => setFields(response));
-    setLoaded(true);
-  }, [listName]);
+  const { fields, loaded } = GetData(listName);
 
   if (sort) {
     // if sort prop exists, sort by price
