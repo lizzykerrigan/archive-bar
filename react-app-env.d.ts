@@ -12,3 +12,18 @@ declare namespace NodeJS {
 interface Window {
   Stripe: any;
 }
+
+interface MenuItem {
+  id: number;
+  name: string;
+  price: string;
+  type?: string;
+  beer?: string;
+  brewery?: string;
+  line?: string;
+  strength?: string;
+  style?: string;
+  description?: string;
+  chooseFrom?: string;
+  strength?: string;
+}
