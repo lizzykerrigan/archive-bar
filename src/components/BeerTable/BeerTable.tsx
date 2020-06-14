@@ -8,6 +8,7 @@ type BeerTableProps = {
 };
 
 interface Beer {
+  id: number;
   beer: string;
   brewery: string;
   line: string;
@@ -34,29 +35,7 @@ const BeerTable = ({ listName }: BeerTableProps) => {
     'price',
   ];
 
-  const compareFieldsByLineNumber = (
-    a: { line: string },
-    b: { line: string },
-  ): number => {
-    // check line number
-    // return in ascending order
-    const lineA = a.line.slice(-2);
-    const lineB = b.line.slice(-2);
-    return Number(lineA) - Number(lineB);
-  };
-
-  const compareFieldsByLineType = (
-    a: { line: string },
-    b: { line: string },
-  ): number => {
-    // checks if line type is cask or keg
-    // return keg above cask on table
-    const lineA: string = a.line.slice(0, 4).toUpperCase();
-    const lineB: string = b.line.slice(0, 4).toUpperCase();
-    return lineB.localeCompare(lineA);
-  };
-
-  fields.sort(compareFieldsByLineNumber).sort(compareFieldsByLineType);
+  fields.sort((a, b) => a.id - b.id);
 
   return (
     <div className="beer-table">
