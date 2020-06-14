@@ -37,58 +37,54 @@ const WinesList = ({ listName }: WineListProps) => {
     <div className={`drinks-list wines-list`}>
       <h2>Wines</h2>
       <h3>Red</h3>
-      <ul>
-        {loaded
-          ? filterWines(fields, 'red').map(({ name, price }, index) => (
-              <li key={index}>
-                <strong>{name}</strong>
-                <br />
-                <em>{price}</em>
-              </li>
-            ))
-          : null}
+      <ul id="red-wines">
+        {loaded &&
+          filterWines(fields, 'red').map(({ name, price }, index) => (
+            <li key={index} className="red-wine-list-item">
+              <strong>{name}</strong>
+              <br />
+              <em>{price}</em>
+            </li>
+          ))}
       </ul>
       <h3>White</h3>
-      <ul>
-        {loaded
-          ? filterWines(fields, 'white').map(({ name, price }, index) => (
-              <li key={index}>
-                <strong>{name}</strong>
-                <br />
-                <em>{price}</em>
-              </li>
-            ))
-          : null}
+      <ul id="white-wines">
+        {loaded &&
+          filterWines(fields, 'white').map(({ name, price }, index) => (
+            <li key={index} className="white-wine-list-item">
+              <strong>{name}</strong>
+              <br />
+              <em>{price}</em>
+            </li>
+          ))}
       </ul>
       {filterWines(fields, 'rose').length > 0 && (
         <>
           <h3>Rosé</h3>
-          <ul className="single-col">
-            {loaded
-              ? filterWines(fields, 'rose').map(({ name, price }, index) => (
-                  <li key={index}>
-                    <strong>{name}</strong>
-                    <br />
-                    <em>{price}</em>
-                  </li>
-                ))
-              : null}
+          <ul className="single-col" id="rose-wines">
+            {loaded &&
+              filterWines(fields, 'rose').map(({ name, price }, index) => (
+                <li key={index} className="rose-wine-list-item">
+                  <strong>{name}</strong>
+                  <br />
+                  <em>{price}</em>
+                </li>
+              ))}
           </ul>
         </>
       )}
       {filterWines(fields, 'fizz').length > 0 && (
         <>
           <h3>Fizz</h3>
-          <ul className="single-col">
-            {loaded
-              ? filterWines(fields, 'fizz').map(({ name, price }, index) => (
-                  <li key={index}>
-                    <strong>{name}</strong>
-                    <br />
-                    <em>{price}</em>
-                  </li>
-                ))
-              : null}
+          <ul className="single-col" id="fizz-wines">
+            {loaded &&
+              filterWines(fields, 'fizz').map(({ name, price }, index) => (
+                <li key={index} className="fizz-wine-list-item">
+                  <strong>{name}</strong>
+                  <br />
+                  <em>{price}</em>
+                </li>
+              ))}
           </ul>
         </>
       )}
