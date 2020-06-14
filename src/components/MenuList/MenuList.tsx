@@ -11,7 +11,7 @@ type MenuListProps = {
   sort?: boolean;
 };
 
-interface MenuItem {
+interface IMenuItem {
   name: string;
   price: string;
   description?: string;
@@ -27,7 +27,7 @@ const MenuList = ({
   sort,
 }: MenuListProps) => {
   const [loaded, setLoaded] = useState(false);
-  const [fields, setFields] = useState<MenuItem[]>([]);
+  const [fields, setFields] = useState<IMenuItem[]>([]);
 
   useEffect(() => {
     fetchPosts(listName).then(response => setFields(response));
