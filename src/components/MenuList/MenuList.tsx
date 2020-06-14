@@ -43,24 +43,31 @@ const MenuList = ({
   }
 
   return (
-    <div className={`drinks-list ${listName}-list`}>
+    <div className={'menu-list'}>
       <h2>{heading}</h2>
-      <ul className={className ?? ''}>
+      <ul
+        className={
+          className ? `${className} ${listName}-list` : `${listName}-list`
+        }
+      >
         {loaded &&
           fields.map((el, index) => (
-            <li key={index}>
+            <li key={index} className="menu-item">
               <strong>{el.name}</strong>
               <br />
-              <em>
-                {el.price ?? ''} {el.strength && `(${el.strength})`}
-              </em>
+              {el.price && <em className="item-price">{el.price}</em>}
+              {el.strength && <em className="item-strength">{el.strength}</em>}
               {el.chooseFrom && (
                 <>
                   <br />
-                  <em>Choose from: {el.chooseFrom}</em>
+                  <em className="item-choose-from">
+                    Choose from: {el.chooseFrom}
+                  </em>
                 </>
               )}
-              {el.description && <p>{el.description}</p>}
+              {el.description && (
+                <p className="item-description">{el.description}</p>
+              )}
             </li>
           ))}
       </ul>
