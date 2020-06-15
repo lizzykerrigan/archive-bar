@@ -56,7 +56,9 @@ const MenuList = ({
               <strong>{el.name}</strong>
               <br />
               {el.price && <em className="item-price">{el.price}</em>}
-              {el.strength && <em className="item-strength">{el.strength}</em>}
+              {el.strength && (
+                <em className="item-strength">{`, ${el.strength}`}</em>
+              )}
               {el.chooseFrom && (
                 <>
                   <br />
