@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => (
   <div className="section-2">
     <div className="w-layout-grid contact-form-grid">
-      <div id="w-node-509be705858e-0bfda119" className="contact-form-wrap">
+      <div className="contact-form-wrap">
         <div className="contact-form-heading-wrap">
           <h2 className="contact-heading">ROOM HIRE & EVENT BOOKINGS</h2>
         </div>
@@ -20,14 +20,14 @@ const Contact = () => (
           <br />
           <p>
             Please{' '}
-            <a href="mailto:archivebarandbottle@gmail.com">
+            <a href="mailto:archivebarandbottle@gmail.com" id="email-link">
               contact us at archivebarandbottle@gmail.com
             </a>{' '}
             to find out how we can accommodate you.
           </p>
         </div>
       </div>
-      <div id="w-node-509be70585a6-0bfda119">
+      <div id="address">
         <div className="details-wrap">
           <div className="label">Where we are</div>
           <div className="paragraph-light">
