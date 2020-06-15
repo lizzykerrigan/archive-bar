@@ -5,12 +5,15 @@ import Drinks from '../Drinks';
 import Food from '../Food';
 import Preloader from '../Preloader';
 import ContactPage from '../ContactPage';
+import fetchPosts from '../../api';
 // import EventsSection from '../Events';
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
+  const [desc, setDesc] = useState('');
 
   useEffect(() => {
+    fetchPosts('mainDescription').then(response => setDesc(response[0].text));
     setTimeout(() => {
       setLoaded(true);
     }, 2000);
@@ -21,7 +24,7 @@ const Home = () => {
     <>
       {!loaded && <Preloader />}
       <MainPageIntro />
-      <MainPageDescription />
+      <MainPageDescription desc={desc} />
       <Drinks />
       <Food />
       {/* <EventsSection /> */}
