@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test-cov": "npm run test -- --coverage --watchAll=false",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix"
