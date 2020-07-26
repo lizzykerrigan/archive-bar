@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './BeerTable.css';
 
 import fetchPosts from '../../api';
 
@@ -39,12 +38,19 @@ const BeerTable = ({ listName }: BeerTableProps) => {
 
   return (
     <div className="beer-table">
-      <h2>Beer Board</h2>
-      <table>
+      <h2 className="my-6 uppercase text-2xl">Beer Board</h2>
+      <table className="table-auto m-auto border-collapse">
         <thead>
           <tr>
             {loaded &&
-              headings.map((heading, index) => <th key={index}>{heading}</th>)}
+              headings.map((heading, index) => (
+                <th
+                  className="px-4 py-2 text-left uppercase pt-4 pb-4 border-b-2 border-t-0"
+                  key={index}
+                >
+                  {heading}
+                </th>
+              ))}
           </tr>
         </thead>
         <tbody>
@@ -52,12 +58,24 @@ const BeerTable = ({ listName }: BeerTableProps) => {
             ? fields.map(
                 ({ line, beer, style, brewery, strength, price }, index) => (
                   <tr key={index}>
-                    <td>{line}</td>
-                    <td>{beer}</td>
-                    <td>{style}</td>
-                    <td>{brewery}</td>
-                    <td>{strength}</td>
-                    <td>{price}</td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {line}
+                    </td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {beer}
+                    </td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {style}
+                    </td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {brewery}
+                    </td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {strength}
+                    </td>
+                    <td className="whitespace-normal border-b-0 capitalize text-left leading-4 text-lg">
+                      {price}
+                    </td>
                   </tr>
                 ),
               )
@@ -67,7 +85,7 @@ const BeerTable = ({ listName }: BeerTableProps) => {
       <img
         src="divider-bottom.svg"
         aria-hidden="true"
-        className="bottom-divider"
+        className="bottom-divider h-auto w-1/2 my-4 mx-auto"
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/MenuList.css';
+import './MenuList.css';
 
 import fetchPosts from '../../api';
 
