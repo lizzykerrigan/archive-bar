@@ -26,46 +26,42 @@ const ArchiveNav = () => {
   return (
     <>
       <div
-        data-collapse="medium"
-        data-animation="default"
-        data-duration="200"
-        className={`navigation z-50 ${
+        className={`fixed w-full h-16 px-4 py-10 flex items-center z-50 ${
           scrollY < scrollPos ? 'bg-transparent' : 'bg-archive-500'
         }`}
       >
-        <div className="navigation-wrap">
+        <div className="flex flex-auto relative max-w-screen-xl items-center justify-between mx-auto">
           <a href="/">
             <img
               src="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577184645/archive_header_logo.png"
               alt=""
-              className="logo-image"
+              className="block w-28"
             />
           </a>
-          <div className="menu">
-            <nav role="navigation" className="navigation-items w-nav-menu">
-              <Router>
-                <NavLink
-                  element="drinks-menu"
-                  linkText="Drinks"
-                  icon="wine.svg"
-                />
-                <NavLink
-                  element="food-menu"
-                  linkText="Food"
-                  icon="restaurant.svg"
-                />
-                {/* <NavLink element="events" linkText="Events" icon="calendar.svg" /> */}
-                <NavLink
-                  element="contact"
-                  linkText="Contact"
-                  icon="chat-alt.svg"
-                />
-              </Router>
-            </nav>
-          </div>
-          <div className="menu-button w-nav-button"></div>
+          <nav
+            role="navigation"
+            className="absolute left-auto top-auto right-0 bottom-0 navigation-items w-nav-menu"
+          >
+            <Router>
+              <NavLink
+                element="drinks-menu"
+                linkText="Drinks"
+                icon="wine.svg"
+              />
+              <NavLink
+                element="food-menu"
+                linkText="Food"
+                icon="restaurant.svg"
+              />
+              {/* <NavLink element="events" linkText="Events" icon="calendar.svg" /> */}
+              <NavLink
+                element="contact"
+                linkText="Contact"
+                icon="chat-alt.svg"
+              />
+            </Router>
+          </nav>
         </div>
-        <div className="w-nav-overlay" data-wf-ignore=""></div>
       </div>
     </>
   );
