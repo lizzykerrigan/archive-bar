@@ -157,6 +157,7 @@ module.exports = {
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',
+      '28': '7rem',
       '32': '8rem',
       '40': '10rem',
       '48': '12rem',
@@ -263,7 +264,16 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      serif: [
+        'EB Garamond',
+        '-apple-system-ui-serif',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        '"Times New Roman"',
+        'Times',
+        'serif',
+      ],
       mono: [
         'Menlo',
         'Monaco',
@@ -329,6 +339,8 @@ module.exports = {
       '8': '2rem',
       '9': '2.25rem',
       '10': '2.5rem',
+      '11': '3rem',
+      '12': '4rem',
     },
     listStyleType: {
       none: 'none',
@@ -451,6 +463,7 @@ module.exports = {
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',
+      fit: 'fit-content',
     }),
     zIndex: {
       auto: 'auto',
