@@ -9,20 +9,16 @@ import fetchPosts from '../../api';
 // import EventsSection from '../Events';
 
 const Home = () => {
-  const [loaded, setLoaded] = useState(false);
   const [desc, setDesc] = useState('');
 
   useEffect(() => {
     fetchPosts('mainDescription').then(response => setDesc(response[0].text));
-    setTimeout(() => {
-      setLoaded(true);
-    }, 2000);
   }, []);
 
   document.title = 'Archive Bar & Bottle, Cheadle Hulme';
   return (
     <>
-      {!loaded && <Preloader />}
+      {!desc && <Preloader />}
       <MainPageIntro />
       <MainPageDescription desc={desc} />
       <Drinks />
