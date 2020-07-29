@@ -34,21 +34,23 @@ const WinesList = ({ listName }: WineListProps) => {
   fields.sort((first, second) => first.id - second.id);
 
   return (
-    <div className={`drinks-list wines-list`}>
+    <div>
       <h2>Wines</h2>
       <h3>Red</h3>
-      <ul id="red-wines">
-        {loaded &&
-          filterWines(fields, 'red').map(({ name, price }, index) => (
-            <li key={index} className="red-wine-list-item">
-              <strong>{name}</strong>
-              <br />
-              <em>{price}</em>
-            </li>
-          ))}
+      <ul className="drinks-list" id="red-wines">
+        <div className="flex flex-wrap">
+          {loaded &&
+            filterWines(fields, 'red').map(({ name, price }, index) => (
+              <li key={index}>
+                <strong>{name}</strong>
+                <br />
+                <em>{price}</em>
+              </li>
+            ))}
+        </div>
       </ul>
       <h3>White</h3>
-      <ul id="white-wines">
+      <ul className="drinks-list" id="white-wines">
         {loaded &&
           filterWines(fields, 'white').map(({ name, price }, index) => (
             <li key={index} className="white-wine-list-item">

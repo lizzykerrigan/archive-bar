@@ -48,32 +48,20 @@ li {
   margin-left: -15px;
 }
 
-.bg-img-food,
-.bg-img-drinks,
-.bg-img-contact,
-.bg-img-events {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom center;
-}
-
 .bg-img-food {
-  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577795219/75204589_394055008200433_2599243327693914112_n.jpg.jpg");
+  background-image: url('https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577795219/75204589_394055008200433_2599243327693914112_n.jpg.jpg');
 }
 
 .bg-img-drinks {
-  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576941701/76935991_415094802763120_6370016677035245568_n.jpg.jpg");
+  background-image: url('https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576941701/76935991_415094802763120_6370016677035245568_n.jpg.jpg');
 }
 
 .bg-img-contact {
-  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830039/70701255_366692464270021_3674081789988569088_n.jpg.jpg");
+  background-image: url('https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830039/70701255_366692464270021_3674081789988569088_n.jpg.jpg');
 }
 
 .bg-img-events {
-  background-image: url("https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830843/60775988_288923448713590_1372028672801767424_n.jpg.jpg");
+  background-image: url('https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto:best/v1577830843/60775988_288923448713590_1372028672801767424_n.jpg.jpg');
   background-position: top;
 }
 

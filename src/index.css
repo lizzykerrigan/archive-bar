@@ -1082,22 +1082,6 @@ th:last-of-type {
     font-size: 1rem;
   }
 }
-ul {
-  list-style-type: none;
-  font-size: 1.2rem;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  padding: 0 15vw;
-  -webkit-column-rule: 1px double #1f1f1f;
-  -moz-column-rule: 1px double #1f1f1f;
-  column-rule: 1px double #1f1f1f;
-  grid-column-gap: 10%;
-  -webkit-column-gap: 10%;
-  -moz-column-gap: 10%;
-  column-gap: 10%;
-  text-align: left;
-}
 .single-col {
   -webkit-columns: 1;
   -moz-columns: 1;
