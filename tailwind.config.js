@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
+  },
   target: 'relaxed',
   prefix: '',
   important: false,
