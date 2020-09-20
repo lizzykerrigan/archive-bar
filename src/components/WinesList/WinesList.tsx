@@ -41,7 +41,7 @@ const WinesList = ({ listName }: WineListProps) => {
         <div className="flex flex-wrap">
           {loaded &&
             filterWines(fields, 'red').map(({ name, price }, index) => (
-              <li key={index}>
+              <li key={index} className="red-wine-list-item">
                 <strong>{name}</strong>
                 <br />
                 <em>{price}</em>
