@@ -1,7 +1,7 @@
 import React from 'react';
-import './Menu.css';
+// import './Menu.css';
 
-const Menu = ({ heading }: { heading: string }) => {
+const ImageSection = ({ heading }: { heading: string }) => {
   return (
     <div className="section group">
       <div className="container-fluid">
@@ -13,4 +13,4 @@ const Menu = ({ heading }: { heading: string }) => {
   );
 };
 
-export default Menu;
+export default ImageSection;
