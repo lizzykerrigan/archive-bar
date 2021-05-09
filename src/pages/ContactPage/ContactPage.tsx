@@ -1,11 +1,11 @@
 import React from 'react';
 import Contact from '../../components/Contact';
-import Menu from '../../components/Menu';
+import ImageSection from '../../components/ImageSection';
 
 const ContactPage = () => {
   return (
     <section id="contact">
-      <Menu heading="contact" />
+      <ImageSection heading="contact" />
       <h1>CONTACT US</h1>
       <Contact />
     </section>

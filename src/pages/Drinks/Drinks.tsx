@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../components/Menu';
+import ImageSection from '../../components/ImageSection';
 import BeerTable from '../../components/BeerTable';
 import MenuList from '../../components/MenuList';
 import WinesList from '../../components/WinesList';
@@ -7,7 +7,7 @@ import WinesList from '../../components/WinesList';
 const Drinks = () => {
   return (
     <section id="drinks-menu">
-      <Menu heading="drinks" />
+      <ImageSection heading="drinks" />
       <h1 className="section-heading">Drinks</h1>
       <BeerTable listName="pouring" />
       <MenuList listName="gins" heading="Gin" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../components/Menu';
+import ImageSection from '../../components/ImageSection';
 import MenuList from '../../components/MenuList';
 
 const Food = () => {
@@ -8,7 +8,7 @@ const Food = () => {
 
   return (
     <section id="food-menu">
-      <Menu heading="food" />
+      <ImageSection heading="food" />
       <h1 className="section-heading">Food</h1>
       <MenuList listName="sharingPlatters" heading="Sharing Platters" sort />
       <MenuList
