@@ -1,21 +1,15 @@
-import React from 'react';
+import { Description, Motto, MottoWrap } from './MainPageDescription.styled';
 
 type DescProps = {
   desc: string;
 };
 
-const MainPageDescription = ({ desc }: DescProps) => {
-  return (
-    <div className="description">
-      <div className="motto-wrap">
-        <div className="heading-jumbo-small" id="main-description">
-          <p>{desc}</p>
-          <br />
-        </div>
-      </div>
-      <div className="divider"></div>
-    </div>
-  );
-};
+const MainPageDescription = ({ desc }: DescProps) => (
+  <Description>
+    <MottoWrap>
+      <Motto>{desc}</Motto>
+    </MottoWrap>
+  </Description>
+);
 
 export default MainPageDescription;
