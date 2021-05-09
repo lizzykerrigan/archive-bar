@@ -1,14 +1,14 @@
 import React from 'react';
+import { IntroHead, IntroLogo } from './MainPageIntro.styled';
 
 const MainPageIntro = () => {
   return (
-    <div className="intro-head">
-      <img
-        src="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577132543/archive-logo-transparent.png"
+    <IntroHead imageUrl="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1576786015/5df2a4eb047f851c3e9512b0_66840947_327860078153260_.jpg">
+      <IntroLogo
         alt=""
-        className="intro-logo"
+        src="https://res.cloudinary.com/dpj3m4zwi/image/upload/f_auto,q_auto/v1577132543/archive-logo-transparent.png"
       />
-    </div>
+    </IntroHead>
   );
 };
 
